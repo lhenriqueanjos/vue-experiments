@@ -11,5 +11,6 @@ export default new Router({
   routes: [
     ...homeRoutes,
     ...experimentsModule.lazyLoadedRoutes.routes,
+    ...experimentsModule.scopedSlots.routes,
   ],
 });
