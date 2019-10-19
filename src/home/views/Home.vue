@@ -6,24 +6,11 @@
 
     <div class="main-content">
       <ExperimentThumbnail
-        title="😴 Lazy loaded route"
-        description="Como utilizar a feature de split do bundle para
-          postergar o carregamento de uma rota."
-        :experiment-route="{ name: 'lazyLoadedView'}"
-      />
-
-      <ExperimentThumbnail
-        title="🔬 Scoped slots"
-        description="Exemplo de componente DataProvider utilizando
-          scoped slots."
-        :experiment-route="{ name: 'scopedSlots'}"
-      />
-
-      <ExperimentThumbnail
-        title="💋 Critical CSS"
-        description="Usando o critter para colocar o CSS crítico
-            como inline e o restante como um arquivo."
-        :experiment-route="{ name: 'criticalCss'}"
+        v-for="experiment in experiments"
+        :key="experiment.title"
+        :title="experiment.title"
+        :description="experiment.description"
+        :route="experiment.route"
       />
     </div>
   </main>
@@ -41,6 +28,23 @@ export default {
   data() {
     return {
       logoPng,
+      experiments: [
+        {
+          title: '😴 Lazy loaded route',
+          description: 'Como utilizar a feature de split do bundle para postergar o carregamento de uma rota.',
+          route: { name: 'lazyLoadedView' },
+        },
+        {
+          title: '🔬 Scoped slots',
+          description: 'Exemplo de componente DataProvider utilizando scoped slots.',
+          route: { name: 'scopedSlots' },
+        },
+        {
+          title: '💋 Critical CSS',
+          description: 'Usando o critter para colocar o CSS crítico como inline e o restante como um arquivo.',
+          route: { name: 'criticalCss' },
+        },
+      ],
     };
   },
 };

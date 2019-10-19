@@ -1,7 +1,7 @@
 <template>
   <article class="experiment-thumbnail">
     <router-link
-      :to="experimentRoute"
+      :to="route"
       class="experiment-link"
     >
       <h2>{{ title }}</h2>
@@ -19,7 +19,7 @@ export default {
       type: String,
       required: true,
     },
-    experimentRoute: {
+    route: {
       type: Object,
       default: () => ({ name: 'home' }),
     },
