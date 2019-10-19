@@ -1,37 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        Home
-      </router-link>
-      |
-      <router-link :to="{ name: 'lazyLoadedView' }">
-        Lazy Loaded
-      </router-link>
-      |
-      <router-link :to="{ name: 'scopedSlots' }">
-        Scoped Slots
-      </router-link>
-    </div>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <style lang="scss">
-#app {
+html, body {
+  height: 100%;
+}
+
+body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+* {
+  box-sizing: border-box;
+  outline: none;
 }
+
 </style>
