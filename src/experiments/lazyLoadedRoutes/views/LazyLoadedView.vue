@@ -1,10 +1,10 @@
 <template>
   <main class="lazy-loaded-view">
     <p>
-      O JavaScript desta tela não é carregado a menos que o usuário navegue até aqui.
+      {{ $t('message.info.lazyLoadingExplaination') }}
     </p>
     <p>
-      Essa implementação não provê funcionamento offline desta rota.
+      {{ $t('message.info.willNotWorkOffline') }}
     </p>
   </main>
 </template>
@@ -5522,6 +5522,8 @@ export default {
   },
 };
 </script>
+
+<i18n src="./LazyLoadedView.i18n.json" />
 
 <style lang="scss" scoped>
 .lazy-loaded-view {

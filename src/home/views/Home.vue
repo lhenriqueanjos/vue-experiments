@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <div class="top-bar">
-      <h1>🔬 Vue Experiments</h1>
+      <h1>{{ $t('app.name') }}</h1>
     </div>
 
     <div class="main-content">
@@ -30,18 +30,18 @@ export default {
       logoPng,
       experiments: [
         {
-          title: '😴 Lazy loaded route',
-          description: 'Como utilizar a feature de split do bundle para postergar o carregamento de uma rota.',
+          title: this.$t('experiment.lazyLoadedView.name'),
+          description: this.$t('experiment.lazyLoadedView.description'),
           route: { name: 'lazyLoadedView' },
         },
         {
-          title: '🔬 Scoped slots',
-          description: 'Exemplo de componente DataProvider utilizando scoped slots.',
+          title: this.$t('experiment.scopedSlots.name'),
+          description: this.$t('experiment.scopedSlots.description'),
           route: { name: 'scopedSlots' },
         },
         {
-          title: '💋 Critical CSS',
-          description: 'Usando o critter para colocar o CSS crítico como inline e o restante como um arquivo.',
+          title: this.$t('experiment.criticalCss.name'),
+          description: this.$t('experiment.criticalCss.description'),
           route: { name: 'criticalCss' },
         },
       ],
@@ -77,3 +77,5 @@ export default {
   }
 }
 </style>
+
+<i18n src="./Home.i18n.json" />
