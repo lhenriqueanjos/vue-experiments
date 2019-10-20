@@ -12,6 +12,10 @@ module.exports = {
   pwa: {
     workboxOptions: {
       excludeChunks: ['lazyLoadedView'],
+      runtimeCaching: [{
+        urlPattern: '**/lazyLoadedView.*',
+        handler: 'networkFirst',
+      }],
     },
   },
 
