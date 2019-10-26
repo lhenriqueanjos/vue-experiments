@@ -1,17 +1,25 @@
 <template>
-  <main class="lazy-loaded-view">
+  <ExperimentLayout
+    title="😴 Lazy loaded route"
+    class="lazy-loaded-view"
+  >
     <p>
       {{ $t('message.info.lazyLoadingExplaination') }}
     </p>
     <p>
       {{ $t('message.info.willNotWorkOffline') }}
     </p>
-  </main>
+  </ExperimentLayout>
 </template>
 
 <script>
+import ExperimentLayout from '../../components/ExperimentLayout.vue';
+
 export default {
   name: 'LazyLoadedView',
+  components: {
+    ExperimentLayout,
+  },
   data() {
     return {
       makeThisComponentBig: {

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <ExperimentLayout title="🔬 Scoped slots">
     <DataProvider url="https://jsonplaceholder.typicode.com/users">
       <template v-slot="{ data, loading }">
         <div v-if="loading">
@@ -31,16 +31,18 @@
         Data Provider component in Vue.js
       </a>
     </p>
-  </main>
+  </ExperimentLayout>
 </template>
 
 <script>
 import { DataProvider } from '@/components';
+import ExperimentLayout from '../../components/ExperimentLayout.vue';
 
 export default {
   name: 'ScopedSlots',
   components: {
     DataProvider,
+    ExperimentLayout,
   },
 };
 </script>
