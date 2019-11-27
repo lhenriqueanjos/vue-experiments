@@ -12,6 +12,10 @@
       "criticalCss": {
         "name": "💋 Critical CSS",
         "description": "Usando o critter para colocar o CSS crítico como inline e o restante como um arquivo."
+      },
+      "stateManagement": {
+        "name": "State management",
+        "description": "Gerenciamento de estado global com Vuex."
       }
     }
   }
