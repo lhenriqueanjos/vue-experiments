@@ -3,10 +3,13 @@
     <DataProvider url="https://jsonplaceholder.typicode.com/users">
       <template v-slot="{ data, loading }">
         <div v-if="loading">
-          Aguarde...
+          {{ $t('message.info.loading') }}
         </div>
         <div v-else>
-          <h2>Resultado: {{ data.length }} usuários encontrados</h2>
+          <h2>
+            {{ $t('label.result') }}:
+            {{ $tc('message.info.result', data.length, { count: data.length }) }}
+          </h2>
           <ol>
             <li
               v-for="user in data"
@@ -19,7 +22,7 @@
       </template>
     </DataProvider>
     <p>
-      Referência:
+      {{ $t('label.reference') }}:
       <a
         href="https://vuedose.tips/tips/data-provider-component-in-vue-js/"
         target="_blank"
@@ -41,3 +44,5 @@ export default {
   },
 };
 </script>
+
+<i18n src="./ScopedSlots.i18n.json" />

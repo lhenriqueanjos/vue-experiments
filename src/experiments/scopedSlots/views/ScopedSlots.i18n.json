@@ -1,0 +1,14 @@
+{
+  "pt-BR": {
+    "message": {
+      "info": {
+        "loading": "Aguarde...",
+        "result": "nenhum registro encontrado | 1 registro encontrado | {count} registros encontrados"
+      }
+    },
+    "label": {
+      "result": "Resultado",
+      "reference": "Referência"
+    }
+  }
+}

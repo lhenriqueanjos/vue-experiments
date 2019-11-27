@@ -1,0 +1,10 @@
+{
+  "pt-BR": {
+    "message": {
+      "info": {
+        "lazyLoadingExplaination": "O JavaScript desta tela não é carregado a menos que o usuário navegue até aqui.",
+        "willNotWorkOffline": "Essa implementação não provê funcionamento offline desta rota."
+      }
+    }
+  }
+}
