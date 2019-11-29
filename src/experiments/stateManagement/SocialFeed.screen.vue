@@ -25,6 +25,7 @@
       :key="post.id"
       :title="post.title"
       :body="post.body"
+      @click.native="() => goToPostDetails(post)"
     />
   </main>
 </template>
@@ -53,6 +54,13 @@ export default {
     goBack() {
       this.$router.push({ name: 'home' });
     },
+    goToPostDetails(post) {
+      this.$store.dispatch('GET_POST_DETAILS', post.id);
+      this.$router.push({
+        name: 'postDetails',
+        params: { postId: post.id },
+      });
+    },
   },
 };
 </script>
@@ -66,6 +74,13 @@ export default {
   display: flex;
   flex-direction: row;
   align-content: space-between;
+  margin-bottom: 16px;
+
+  max-height: 32px;
+
+  h1 {
+    margin: 0;
+  }
 
   button {
     margin: 0 8px;

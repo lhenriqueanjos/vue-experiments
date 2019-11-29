@@ -6,6 +6,11 @@ export default [
     component: () => import(/* webpackChunkName: "stateManagement" */ './PeopleCounter.screen.vue'),
   },
   {
+    path: '/social-feed/post/:postId',
+    name: 'postDetails',
+    component: () => import(/* webpackChunkName: "stateManagement" */ './PostDetails.screen.vue'),
+  },
+  {
     path: '/social-feed',
     alias: '/👥',
     name: 'socialFeed',
