@@ -44,6 +44,11 @@ export default {
           description: this.$t('experiment.criticalCss.description'),
           route: { name: 'criticalCss' },
         },
+        {
+          title: this.$t('experiment.stateManagement.name'),
+          description: this.$t('experiment.stateManagement.description'),
+          route: { name: 'socialFeed' },
+        },
       ],
     };
   },
